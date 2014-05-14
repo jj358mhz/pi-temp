@@ -14,16 +14,16 @@ These values are configurable, but I take no responsibilty for the health of you
 
 # Installation Steps:
 
+* **Navigate to the following sub-directory:**
+
+```bash
+~/usr/bin
+```
+
 * **Download the *tempcheck* script:**
 
 ```bash
 curl "https://raw.githubusercontent.com/jj358mhz/TempPi/master/tempcheck" -o tempcheck
-```
-
-* **Place it here:**
-
-```bash
-~/usr/bin
 ```
 
 * **Modify it to make it executable (may need sudo)**
