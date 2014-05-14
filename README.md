@@ -26,5 +26,5 @@ curl "https://raw.githubusercontent.com/jj358mhz/TempPi/master/tempcheck.sh" -o 
 * **Modify your crontab (sudo crontab -e) with this line:**
 
 ```bash
-*/5 *   *   *   *    /usr/bin/tempcheck
+*/5 *   *   *   *    /usr/bin/tempcheck.sh
 ```
