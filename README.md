@@ -5,7 +5,7 @@ TempPi
 
 # Installation Steps:
 
-* **Download the *tempcheck.sh* script an place in:**
+* **Download the *tempcheck* script an place in:**
 
 ```bash
 curl "https://raw.githubusercontent.com/jj358mhz/TempPi/master/tempcheck" -o tempcheck
