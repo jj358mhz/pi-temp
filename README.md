@@ -9,4 +9,5 @@ Script to shut down a RaspberryPi if SoC temperature exceeds a user-set level
 
 * **Modify your crontab (sudo crontab -e) with this line:**
 
-*/5 *   *   *   *    /usr/bin/tempcheck
+'''bash
+*/5 *   *   *   *    /usr/bin/tempcheck'''
