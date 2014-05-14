@@ -8,7 +8,7 @@ TempPi
 * **Download the *tempcheck.sh* script an place in:**
 
 ```bash
-curl "https://raw.githubusercontent.com/jj358mhz/TempPi/master/tempcheck.sh" -o tempcheck.sh
+curl "https://raw.githubusercontent.com/jj358mhz/TempPi/master/tempcheck" -o tempcheck
 ```
 
 * **Place it here:**
@@ -20,11 +20,11 @@ curl "https://raw.githubusercontent.com/jj358mhz/TempPi/master/tempcheck.sh" -o 
 * **Modify it to make it executable (may need sudo)**
 
 ```bash
- $chmod +x tempcheck.sh
+ $chmod +x tempcheck
 ```
 
 * **Modify your crontab (sudo crontab -e) with this line:**
 
 ```bash
-*/5 *   *   *   *    /usr/bin/tempcheck.sh
+*/5 *   *   *   *    /usr/bin/tempcheck
 ```
