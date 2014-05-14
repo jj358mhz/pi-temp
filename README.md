@@ -1,11 +1,11 @@
 TempPi
 ======
 
-Script to shut down a RaspberryPi if SoC temperature exceeds a user-set level
+**TempPi** is a **BASH** script used to shut down a RaspberryPi if the SoC temperature exceeds a user-set level.
 
 # Installation Steps:
 
-* **Download the %%itempcheck.sh%%i script an place in:**
+* **Download the *tempcheck.sh* script an place in:**
 
 ```bash
 ~/usr/bin
