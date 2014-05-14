@@ -1,4 +1,4 @@
-# script/filename location: /usr/bin/tempcheck
+# script/filename location: /usr/bin/tempcheck.sh
 
 #!/bin/sh
 #  This script reads the Broadcom SoC temperature value and shuts down if it 
