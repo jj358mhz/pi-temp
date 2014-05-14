@@ -1,7 +1,16 @@
 TempPi
 ======
 
-**TempPi** is a **BASH** script used to shut down a RaspberryPi if the SoC temperature exceeds a user-set level. The script will not allow the temperature to exceed 78 degrees Celsius. Crontab checks the temperature every five minutes. These values are configurable, but I take no responsibilty for the health of your RaspberryPi while using this script.
+**TempPi** is a **BASH** script used to shut down a RaspberryPi if the SoC temperature exceeds a user-set level.
+
+## Description
+
+As configured, the script will:
+
+* NOT allow the temperature to exceed 78 degrees Celsius
+* Check the temperature every five minutes
+ 
+These values are configurable, but I take no responsibilty for the health of your RaspberryPi while using this script.
 
 # Installation Steps:
 
