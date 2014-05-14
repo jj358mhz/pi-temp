@@ -12,7 +12,7 @@ As configured, the script will:
  
 These values are configurable, but I take no responsibilty for the health of your RaspberryPi while using this script.
 
-# Installation Steps:
+## Installation Steps:
 
 * **Navigate to the following sub-directory:**
 
