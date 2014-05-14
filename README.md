@@ -8,6 +8,12 @@ TempPi
 * **Download the *tempcheck.sh* script an place in:**
 
 ```bash
+curl "https://raw.github.com/jj358mhz/TempPi/master/tempcheck.sh" -o tempcheck.sh
+```
+
+* **Place it here:**
+
+```bash
 ~/usr/bin
 ```
 
