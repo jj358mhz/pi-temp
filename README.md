@@ -7,8 +7,8 @@ Script to shut down a RaspberryPi if SoC temperature exceeds a user-set level
 
 * **Download tempcheck.sh script an place in:
 
-```bash /usr/bin
-```
+```bash /usr/bin```
+
 * **Modify it to make it executable**
 
 ```bash
