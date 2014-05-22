@@ -1,6 +1,6 @@
-# version 0.1 13-May-2014
-
 #!/bin/sh
+
+# version 0.1 13-May-2014
 
 #  This script reads the Broadcom SoC temperature value and shuts down if it 
 #  exceeds a particular value.
