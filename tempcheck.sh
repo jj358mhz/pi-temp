@@ -1,8 +1,10 @@
 #!/bin/sh
 
-#  This script reads the Broadcom SoC temperature value and shuts down if it 
+#  This script reads the Broadcom SoC temperature value and shuts down if it
 #  exceeds a particular value.
 #  80ºC is the maximum allowed for a Raspberry Pi.
+
+# Copyright (C) 2014-2017 Jeff Johnston <jj358mhz@gmail.com>
 
 # Get the reading from the sensor and strip the non-number parts
 SENSOR="`/opt/vc/bin/vcgencmd measure_temp | cut -d "=" -f2 | cut -d "'" -f1`"
