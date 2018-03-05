@@ -22,7 +22,7 @@ These values are configurable, but I take no responsibilty for the health of you
 git clone https://github.com/jj358mhz/TempPi.git
 ```
 ```bash
-cp tempcheck.sh /usr/bin
+$cp tempcheck.sh /usr/bin
 ```
 * **Modify it to make it executable (may need sudo)**
 
