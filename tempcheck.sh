@@ -8,22 +8,25 @@
 
 # Enter your Slack Webhook below
 SLACK_WEBHOOK=
-POST_TO_SLACK="/usr/local/bin/post_to_slack"
 SLACK_CHANNEL=""
-SCANNER_CHANNEL=""
+SCANNER_CHANNEL="UC Berkeley Police"
+EMOJI=fire
+
+# Path to Slack Script ***Enter Yours Below***
+POST_TO_SLACK="/usr/local/bin/post_to_slack"
 
 # Get the reading from the sensor and strip the non-number parts
 SENSOR="`/opt/vc/bin/vcgencmd measure_temp | cut -d "=" -f2 | cut -d "'" -f1`"
 # -gt only deals with whole numbers, so round it.
 TEMP="`/usr/bin/printf "%.0f\n" ${SENSOR}`"
 # How hot will we allow the SoC to get?
-MAX="60"
+MAX="10"
 
 if [ "${TEMP}" -gt "${MAX}" ] ; then
  # This will be mailed to root if called from cron
  echo "${TEMP}ºC is too hot!"
  # Send a message to Slack
- $POST_TO_SLACK -t "${SCANNER_CHANNEL} Pi Alert" -b "${TEMP}ºC is too hot!" -c "${SLACK_CHANNEL}" -u "$SLACK_WEBHOOK"
+ $POST_TO_SLACK -t "${SCANNER_CHANNEL} Pi Alert" -e "${EMOJI}" -b "${TEMP}ºC is too hot!" -c "${SLACK_CHANNEL}" -u "$SLACK_WEBHOOK"
  # Send a message to syslog
  /usr/bin/logger "Shutting down due to SoC temp ${TEMP}."
  # Halt the box
