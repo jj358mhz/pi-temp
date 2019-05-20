@@ -12,6 +12,7 @@ set -x
 
 # File Locations for Raspberry Pi (Debian based)
 ### /usr/local/bin/tempcheck      ( this file )
+### /etc/tempcheck/temcheck.conf  ( config file )
 ### /usr/local/bin/post_to_slack  ( post_to_slack )
 
 # Schedule a cronjob to run every 5 minutes
@@ -27,14 +28,17 @@ set -x
 # |  |  |  |  |
 # *  *  *  *  * user-name  command to be executed
 
+# PATH added in case it is not set when cron runs @reboot
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+# Make config changes to the following file...
+CONFIGFILE=/etc/tempcheck/tempcheck.conf
+
+# Check and load the conf file
+[ -f "$CONFIGFILE" ] && . $CONFIGFILE
+
 ##################################################################
 
-# Enter your Slack webhook
-SLACK_WEBHOOK=""
-#Enter you Slack channel name
-SLACK_CHANNEL=""
-# Enter the title of your device
-TITLE="UC Berkeley Police"
 # Slack emoji (you can change to suit your needs)
 EMOJI=fire
 

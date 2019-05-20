@@ -1,6 +1,9 @@
 # CHANGELOG
 
-## Version 1.1 - (03 May 2019)
+## Version 1.1.1 - (19 May 2019)
+* ADDED: Separate config file for the main script
+
+### Version 1.1 - (03 May 2019)
 * ADDED: Slack alerting functionality with secondary `PostToSlack` script (https://github.com/jj358mhz/PostToSlack)
 
 ### Version 1.0 - (08 Aug 2017)

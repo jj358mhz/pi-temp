@@ -33,7 +33,7 @@ $cp tempcheck /usr/local/bin
 * **Modify your crontab (sudo crontab -e) with this line:**
 
 ```bash
-*/5 *   *   *   *    /usr/bin/tempcheck
+*/5 *   *   *   *    /usr/local/bin/tempcheck
 ```
 
 ### Copying the File Directly
