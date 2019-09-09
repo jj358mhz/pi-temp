@@ -11,12 +11,12 @@ set -x
 # This script work with a secondary script called ( post_to_slack )
 
 # File Locations for Raspberry Pi (Debian based)
-### /usr/local/bin/tempcheck      ( this file )
-### /usr/local/bin/post_to_slack  ( post_to_slack )
+### /usr/local/bin/tempcheck.sh      ( this file )
+### /usr/local/bin/post_to_slack     ( post_to_slack )
 
 # Schedule a cronjob to run every 5 minutes
 # sudo crontab -e and paste the entry below
-# */5 * * * *    /usr/local/bin/tempcheck >/dev/null 2>&1
+# */5 * * * *    /usr/local/bin/tempcheck.sh >/dev/null 2>&1
 
 # Example of job definition:
 # .---------------- minute (0 - 59)
