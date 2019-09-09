@@ -22,18 +22,18 @@ These values are configurable, but I take no responsibility for the health of yo
 git clone https://github.com/jj358mhz/TempPi.git
 ```
 ```bash
-$cp tempcheck /usr/local/bin
+$cp tempcheck.sh /usr/local/bin
 ```
 * **Modify it to make it executable (may need sudo)**
 
 ```bash
- $chmod +x tempcheck
+ $chmod +x tempcheck.sh
 ```
 
 * **Modify your crontab (sudo crontab -e) with this line:**
 
 ```bash
-*/5 *   *   *   *    /usr/bin/tempcheck
+*/5 *   *   *   *    /usr/bin/tempcheck.sh
 ```
 
 ### Copying the File Directly
@@ -43,20 +43,20 @@ $cp tempcheck /usr/local/bin
 ~/usr/local/bin
 ```
 
-* **then, download the *tempcheck* script:**
+* **then, download the *tempcheck.sh* script:**
 
 ```bash
-curl "https://raw.githubusercontent.com/jj358mhz/TempPi/master/tempcheck" -o tempcheck
+curl "https://raw.githubusercontent.com/jj358mhz/TempPi/master/tempcheck.sh" -o tempcheck.sh
 ```
 
 * **Modify it to make it executable (may need sudo)**
 
 ```bash
- $chmod +x tempcheck
+ $chmod +x tempcheck.sh
 ```
 
 * **Modify your crontab (sudo crontab -e) with this line:**
 
 ```bash
-*/5 *   *   *   *    /usr/local/bin/tempcheck
+*/5 *   *   *   *    /usr/local/bin/tempcheck.sh
 ```
