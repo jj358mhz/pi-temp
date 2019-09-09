@@ -30,9 +30,9 @@ set -x
 ##################################################################
 
 # Enter your Slack webhook
-SLACK_WEBHOOK=""
+SLACK_WEBHOOK=
 #Enter you Slack channel name
-SLACK_CHANNEL=""
+SLACK_CHANNEL="YOUR_SLACK_CHANNEL_NAME_HERE"
 # Enter the title of your device
 TITLE="UC Berkeley Police"
 # Slack emoji (you can change to suit your needs)
