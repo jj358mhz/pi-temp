@@ -18,7 +18,7 @@ set -x
 
 # Schedule a cronjob to run every 5 minutes
 # sudo crontab -e and paste the entry below
-# */5 * * * *    /usr/local/bin/tempcheck >/dev/null 2>&1
+# */5 * * * * root /usr/local/bin/tempcheck.sh >/dev/null 2>&1
 
 # Example of job definition:
 # .---------------- minute (0 - 59)

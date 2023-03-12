@@ -29,5 +29,5 @@ sudo mkdir -p /etc/tempcheck/ && sudo cp tempcheck.conf /etc/tempcheck/
 
 * **Modify your crontab (sudo crontab -e) with this line:**
 ```bash
-*/5 *   *   *   *    /usr/local/bin/tempcheck.sh
+*/5 * * * * root /usr/local/bin/tempcheck.sh >/dev/null 2>&1
 ```
