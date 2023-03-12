@@ -1,13 +1,28 @@
-# CHANGELOG
+# tempcheck.sh changelog
+All notable changes to [tempcheck.sh] script will be documented in this file.
 
-## Version 1.1.1 - (19 May 2019)
-* ADDED: Separate config file for the main script
+The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
 
-### Version 1.1 - (03 May 2019)
-* ADDED: Slack alerting functionality with secondary `PostToSlack` script (https://github.com/jj358mhz/PostToSlack)
+# [2.0.0] - 2023-03-11
+## Added
+- Integrated `curl` for POST'ing message to Slack
+## Removed
+- Secondary script for posting to Slack (`PostToSlack`)
+## Updated
+- Set default maximum temperature to `78ºC`
+- `README.md` instructions 
 
-### Version 1.0 - (08 Aug 2017)
-* UPDATED: Reduced default MAXIMUM allowed temperature of the SoC for shutdown 
+## [1.1.1] - 2019-05-19
+## Added
+- Separate config file for the main script
 
-### Version 0.1 - (13 May 2014)
-* Initial release
+## [1.1.0] - 2019-05-03
+## Added
+- Slack alerting functionality with secondary `PostToSlack` script (https://github.com/jj358mhz/PostToSlack)
+
+## [1.0.0] - 2017-08-08
+## Updated
+- Reduced default MAXIMUM allowed temperature of the SoC for shutdown 
+
+## [0.1.0] - 2014-05-13
+- Initial release
