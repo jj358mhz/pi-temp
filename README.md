@@ -1,7 +1,7 @@
-TempPi
+pi-temp
 ======
 
-**TempPi** is a **BASH** script used to shut down a RaspberryPi if the SoC temperature exceeds a user-set level.
+**pi-temp** is a **BASH** script used to shut down a RaspberryPi if the SoC temperature exceeds a user-set level.
 
 ## Description
 
@@ -19,14 +19,17 @@ These values are configurable, but I take no responsibility for the health of yo
 * **Clone the repository (recommended):**
 
 ```bash
-git clone https://github.com/jj358mhz/TempPi.git
+git clone https://github.com/jj358mhz/pi-temp.git
 ```
 ```bash
+<<<<<<< HEAD
 $cp tempcheck.sh /usr/local/bin
+=======
+sudo cp tempcheck.sh /usr/local/bin
+>>>>>>> dev
 ```
-* **Modify it to make it executable (may need sudo)**
-
 ```bash
+<<<<<<< HEAD
  $chmod +x tempcheck.sh
 ```
 
@@ -47,12 +50,19 @@ $cp tempcheck.sh /usr/local/bin
 
 ```bash
 curl "https://raw.githubusercontent.com/jj358mhz/TempPi/master/tempcheck.sh" -o tempcheck.sh
+=======
+sudo mkdir -p /etc/tempcheck/ && sudo cp tempcheck.sh /etc/tempcheck/
+>>>>>>> dev
 ```
 
 * **Modify it to make it executable (may need sudo)**
 
 ```bash
+<<<<<<< HEAD
  $chmod +x tempcheck.sh
+=======
+chmod +x /usr/local/bin/tempcheck.sh
+>>>>>>> dev
 ```
 
 * **Modify your crontab (sudo crontab -e) with this line:**
