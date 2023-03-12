@@ -14,28 +14,20 @@ These values are configurable, but I take no responsibility for the health of yo
 
 ## Installation Steps:
 
-
-### Repo Cloning
 * **Clone the repository (recommended):**
-
 ```bash
 git clone https://github.com/jj358mhz/pi-temp.git
 ```
+
+* **Modify it to make it executable (may need sudo)**
 ```bash
-sudo cp tempcheck.sh /usr/local/bin
+sudo cp tempcheck.sh /usr/local/bin && sudo chmod +x /usr/local/bin/tempcheck.sh
 ```
 ```bash
 sudo mkdir -p /etc/tempcheck/ && sudo cp tempcheck.conf /etc/tempcheck/
 ```
 
-* **Modify it to make it executable (may need sudo)**
-
-```bash
-chmod +x /usr/local/bin/tempcheck.sh
-```
-
 * **Modify your crontab (sudo crontab -e) with this line:**
-
 ```bash
 */5 *   *   *   *    /usr/local/bin/tempcheck.sh
 ```
