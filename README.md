@@ -25,7 +25,7 @@ git clone https://github.com/jj358mhz/pi-temp.git
 sudo cp tempcheck.sh /usr/local/bin
 ```
 ```bash
-sudo mkdir -p /etc/tempcheck/ && sudo cp tempcheck.sh /etc/tempcheck/
+sudo mkdir -p /etc/tempcheck/ && sudo cp tempcheck.conf /etc/tempcheck/
 ```
 
 * **Modify it to make it executable (may need sudo)**
