@@ -14,12 +14,12 @@ These values are configurable, but I take no responsibility for the health of yo
 
 ## Installation Steps:
 
-* **Clone the repository (recommended):**
+* **Clone the repository**
 ```bash
 git clone https://github.com/jj358mhz/pi-temp.git
 ```
 
-* **Modify it to make it executable (may need sudo)**
+* **Modify it to make it executable**
 ```bash
 sudo cp tempcheck.sh /usr/local/bin && sudo chmod +x /usr/local/bin/tempcheck.sh
 ```
