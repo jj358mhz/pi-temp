@@ -10,7 +10,7 @@
 
 # Install with this command (from your Linux machine):
 #
-# curl -sSL https://install.pi-hole.net | bash
+# curl -sSL https://raw.githubusercontent.com/jj358mhz/pi-temp/master/install.sh | bash
 
 # -e option instructs bash to immediately exit if any command [1] has a non-zero exit status
 # We do not want users to end up with a partially working install, so we exit the script
@@ -32,13 +32,13 @@ sudo cp tempcheck.sh /usr/local/bin/tempcheck.sh
 sudo chmod +x /usr/local/bin/tempcheck.sh
 
 # Prompt user for Slack webhook
-read -p -r "Enter your Slack webhook: " SLACK_WEBHOOK
+read -r -p "Enter your Slack webhook: " SLACK_WEBHOOK
 
 # Prompt user for Slack channel name
-read -p -r "Enter your Slack channel name: " SLACK_CHANNEL
+read -r -p "Enter your Slack channel name: " SLACK_CHANNEL
 
 # Prompt user for device title
-read -p -r "Enter the title of your device: " TITLE
+read -r -p "Enter the title of your device: " TITLE
 
 # Create config file
 echo "#  This script config file configures the tempcheck script that reads the Broadcom SoC temperature value and" | sudo tee /etc/tempcheck/tempcheck.conf

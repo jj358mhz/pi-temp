@@ -7,7 +7,7 @@ pi-temp
 
 As configured, the script will:
 
-* NOT allow the temperature to exceed 60 degrees Celsius
+* NOT allow the temperature to exceed 78 degrees Celsius
 * Check the temperature every five minutes
 
 These values are configurable, but I take no responsibility for the health of your RaspberryPi while using this script.

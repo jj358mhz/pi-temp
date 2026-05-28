@@ -7,11 +7,15 @@
 LOG_LOCATION="/var/log/tempcheck"
 
 # Check if LOG_LOCATION directory exists, if not, create it
+LOG_CREATED=0
 if [ ! -d "$LOG_LOCATION" ]; then
   sudo mkdir -p "$LOG_LOCATION"
-  echo "Created "$LOG_LOCATION" folder"
+  LOG_CREATED=1
 fi
-exec &> >(tee -i "$LOG_LOCATION/tempcheck.log")
+exec &> >(tee -a "$LOG_LOCATION/tempcheck.log")
+if [ "$LOG_CREATED" -eq 1 ]; then
+  echo "Created ${LOG_LOCATION} folder"
+fi
 
 readonly VERSION="2.1.0"
 readonly CONFIGFILE="/etc/tempcheck/tempcheck.conf"
