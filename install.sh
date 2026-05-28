@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-set -x
-
 # VERSION = [1.0.0] - 2023-03-11
 
 # This script installs the tempcheck.sh script, config file, and necessary dependencies.
@@ -9,6 +7,15 @@ set -x
 # File Locations for Raspberry Pi (Debian based)
 # /usr/local/bin/tempcheck.sh   ( script file )
 # /etc/tempcheck/tempcheck.conf ( config file )
+
+# Install with this command (from your Linux machine):
+#
+# curl -sSL https://install.pi-hole.net | bash
+
+# -e option instructs bash to immediately exit if any command [1] has a non-zero exit status
+# We do not want users to end up with a partially working install, so we exit the script
+# instead of continuing the installation with something broken
+set -e
 
 # Dependencies: curl
 DEPS="curl"
@@ -25,13 +32,13 @@ sudo cp tempcheck.sh /usr/local/bin/tempcheck.sh
 sudo chmod +x /usr/local/bin/tempcheck.sh
 
 # Prompt user for Slack webhook
-read -p "Enter your Slack webhook: " SLACK_WEBHOOK
+read -p -r "Enter your Slack webhook: " SLACK_WEBHOOK
 
 # Prompt user for Slack channel name
-read -p "Enter your Slack channel name: " SLACK_CHANNEL
+read -p -r "Enter your Slack channel name: " SLACK_CHANNEL
 
 # Prompt user for device title
-read -p "Enter the title of your device: " TITLE
+read -p -r "Enter the title of your device: " TITLE
 
 # Create config file
 echo "#  This script config file configures the tempcheck script that reads the Broadcom SoC temperature value and" | sudo tee /etc/tempcheck/tempcheck.conf
